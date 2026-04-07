@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights (large binary files -- download with download_model.sh)
+model/
+
+# Neuron compiled model cache
+neuron_traces/
+/var/tmp/neuron-compile-cache/
+neuronxcc-*/
+
+# Neuron compiler artifacts
+log-neuron-cc.txt
+global_metric_store.json
+PostSPMDPassesExecutionDuration.txt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Test artifacts
+test_outputs/
+test_report.json
+.pytest_cache/
+
+# Build staging
+.build_model/
+.build_voices/
+
+# Environment files
+.env
+.env.local

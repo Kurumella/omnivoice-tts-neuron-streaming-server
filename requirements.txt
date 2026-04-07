@@ -1,0 +1,18 @@
+# OmniVoice Neuron Streaming Server Dependencies
+flask>=3.0,<4.0
+numpy>=1.24.0
+soundfile>=0.12.1
+requests>=2.31.0
+packaging>=23.0
+pydub>=0.25.1
+
+# OmniVoice model (includes transformers, HiggsAudio tokenizer)
+omnivoice>=0.1.0
+
+# Neuron SDK and PyTorch (pre-installed on trn1/inf2 instances or via Dockerfile)
+# torch-neuronx        -- from pip.repos.neuron.amazonaws.com
+# neuronx-distributed   -- from pip.repos.neuron.amazonaws.com
+# torchaudio            -- must match torch-neuronx version
+
+# MP3 encoding support (pure Python, no ffmpeg needed)
+lameenc>=1.7.0

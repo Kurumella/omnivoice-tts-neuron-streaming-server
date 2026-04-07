@@ -1,0 +1,14 @@
+.git
+.github
+__pycache__
+*.py[cod]
+venv/
+.venv/
+neuron_traces/
+test_outputs/
+test_report.json
+.pytest_cache/
+.env
+.env.local
+*.md
+!README.md

@@ -410,19 +410,6 @@ python src/server.py \
 
 TP=2 uses both NeuronCores for every inference call. Only one request can execute at a time. The queue pattern lets Flask accept HTTP requests concurrently while the worker processes them sequentially.
 
-### OmniVoice vs Traditional TTS
-
-OmniVoice uses **discrete masked diffusion** -- a fundamentally different approach from autoregressive TTS:
-
-| Aspect | OmniVoice | Autoregressive TTS |
-|--------|-----------|--------------------------|
-| **Generation** | Iterative unmasking (N steps) | Left-to-right token generation |
-| **Attention** | Bidirectional (full) | Causal (masked) |
-| **Stages** | Single (text -> audio tokens) | Multi (text -> mel -> waveform) |
-| **Vocoder** | HiggsAudioV2 codec | HiFiGAN |
-| **Speed** | RTF ~9.5x (8 steps), ~18x (2 steps) | RTF ~10x |
-| **Languages** | 600+ | 17 |
-
 ### Model Components
 
 | Component | Location | Details |

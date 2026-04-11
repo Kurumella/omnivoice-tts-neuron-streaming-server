@@ -302,12 +302,13 @@ with open("output.pcm", "wb") as f:
 from openai import OpenAI
 
 client = OpenAI(base_url="http://localhost:8000/v1", api_key="not-needed")
-response = client.audio.speech.create(
+with client.audio.speech.with_streaming_response.create(
     model="tts-1",
     voice="alloy",
     input="Hello from OmniVoice on NeuronCores!",
-)
-response.stream_to_file("output.mp3")
+    response_format="mp3",
+) as response:
+    response.stream_to_file("output.mp3")
 ```
 
 ## Voice Mapping
